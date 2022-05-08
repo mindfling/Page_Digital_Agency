@@ -105,7 +105,6 @@ blockquote {
   max-width: 1240px; /* 30 + 1180 + 30 */
   padding: 0 30px;
   margin: 0 auto;
-
   /* border: 1px solid orange; */
 }
 
@@ -114,7 +113,7 @@ blockquote {
 это половина от расстояния между блоками
 */
 .section {
-  padding: 50px 0;
+  padding: 25px 0;
   display: block;
   /* 1440px */
   width: 100%;
@@ -132,7 +131,6 @@ blockquote {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  /* padding-bottom: 40px; */
 }
 
 

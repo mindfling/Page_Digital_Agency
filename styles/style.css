@@ -6,14 +6,14 @@
 @import "button.css";
 
 @import "header/header.css";
-@import "header/navigation.css";
-@import "banner/banner.css";
-@import "features/features.css";
-@import "halls/halls.css";
-@import "booking/booking.css";
-@import "about/about.css";
-@import "feedback/feedback.css";
-@import "faq/faq.css";
-@import "contacts/contacts.css";
-@import "contacts/social.css";
+@import "navbar/navbar.css";
+
+@import "aboutus/aboutus.css";
+@import "services/services.css";
+@import "project/project.css";
+@import "founder/founder.css";
+@import "testemonial/testemonial.css";
+@import "cta/cta.css";
+@import "cta/cta.css";
+
 @import "footer/footer.css";
