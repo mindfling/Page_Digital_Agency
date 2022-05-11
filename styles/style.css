@@ -3,7 +3,7 @@
 @import "fonts.css";
 @import "normalize.css";
 @import "global.css";
-@import "button.css";
+@import "button/button.css";
 
 @import "header/header.css";
 @import "navbar/navbar.css";
@@ -13,7 +13,6 @@
 @import "project/project.css";
 @import "founder/founder.css";
 @import "testemonial/testemonial.css";
-@import "cta/cta.css";
 @import "cta/cta.css";
 
 @import "footer/footer.css";
