@@ -5,6 +5,9 @@
 @import "global.css";
 
 @import "button/button.css";
+@import "next/next-link.css";
+
+
 @import "header/header.css";
 @import "hero/hero.css";
 @import "aboutus/aboutus.css";

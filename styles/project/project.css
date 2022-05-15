@@ -1,0 +1,66 @@
+/* *The Best
+Amazing Project */
+
+
+.page__section {}
+
+.project__subtitle {
+  text-align: left;
+}
+
+.project {}
+
+.project__heading {
+  /* border: 1px solid violet; */
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__image {
+  border-radius: 12px;
+}
+
+.project__item {}
+
+.project__link-image {
+  /* background: #1E2028; */
+  /* border-radius: 10px; */
+}
+
+.project__link-image_gospace {}
+
+.project__link-image_stay {}
+
+.project__link-image_staycation {}
+
+.project__link-image_vaksin {}
+
+.project__list {
+  /* border: 1px solid violet; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* todo */
+  gap: 20px; 
+  flex-wrap: wrap;
+}
+
+.project__view-all-link {
+  display: flex;
+  align-self: flex-end;
+}
+
+.project__inner {
+  /* border: 1px solid orange; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}

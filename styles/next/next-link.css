@@ -1,0 +1,29 @@
+/* *next link stylize */
+
+.next {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #A1C5E9;
+}
+
+.next_link {
+  display: flex;
+  position: relative;
+}
+
+.next_link::after {
+  content: "";
+  display: flex;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(right-arrow.svg) no-repeat center;
+  background-size: contain;
+}

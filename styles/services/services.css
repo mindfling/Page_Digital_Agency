@@ -62,10 +62,12 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  text-transform: capitalize;
   /* identical to box height, or 143% */
   font-feature-settings: 'salt' on, 'liga' off;
   color: #A1C5E9;
 }
+
 .card__link:hover {
   opacity: .9;
 }
@@ -75,7 +77,8 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: url(right-arrow.svg);
+  background: url(right-arrow.svg) no-repeat center;
+  background-size: contain;
 }
 
 .card__text {
@@ -147,4 +150,3 @@
 .services__heading {
   /* border: 1px solid violet; */
 }
-
