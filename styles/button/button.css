@@ -1,5 +1,11 @@
+:root {
+  --white: #FFFFFF;
+  --blue: #4080BF;
+}
+
 .button {
   display: block;
+  padding: 13px 27px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
@@ -12,9 +18,12 @@
 }
 
 .button_primary {
-  color: #FFFFFF;
-  background: #4080BF;
-  border: 1px solid #4080BF;
+  /* color: #FFFFFF; */
+  /* background: #4080BF; */
+  /* border: 1px solid #4080BF; */
+  color: var(--white);
+  background: var(--blue);
+  border: 1px solid var(--blue);
 }
 
 .button_primary:hover {
@@ -23,3 +32,20 @@
   border: 1px solid #FFFFFF;
 }
 
+.button_primary:focus {
+  color: #4080BF;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  /* ? */
+  /* ? outline: none; */
+  outline: 1px solid var(--blue);
+}
+
+.button_primary:active {
+  color: #FFFFFF;
+  background: #4080BF;
+  border: 1px solid #4080BF;
+  transition: all 100ms ease;
+  /* ? */
+  outline: none;
+}

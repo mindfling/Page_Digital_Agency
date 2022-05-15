@@ -1,0 +1,52 @@
+/* * header */
+
+.header {
+  display: block;
+  width: 100%;
+  padding: 15px 0 8px;
+  /* border: 1px solid lawngreen; */
+}
+
+.header__inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid lawngreen; */
+}
+
+
+
+.header__logo {
+  display: block;
+  width: 200px;
+  height: 45px;
+  background: url(Logo.svg);
+}
+
+
+.menu__item {
+  /* font-family: 'Poppins'; */
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.menu__link {
+  text-transform: capitalize;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.menu__link:hover {
+  opacity: .9;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.page__header {}

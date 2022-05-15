@@ -1,4 +1,18 @@
-/* Global CSS Styles by Mask Leskin */
+/* *colors vars */
+
+:root {
+  --white: #FFFFFF;
+  --blue: #4080BF;
+  --blue-light-link: #A1C5E9;
+  --dark-background: #12141D;
+  --main-font: 'Poppins', sans-serif;
+}
+
+
+/* * Global CSS Styles by Mask Leskin */
+
+
+/* ! вот так правильно */
 
 html {
   box-sizing: border-box;
@@ -11,23 +25,28 @@ html {
   box-sizing: inherit;
 }
 
+.page,
 body {
   display: block;
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  /* стандартный шрифт без засечек */
-  font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
+  /* стандартный системный шрифт без засечек */
+  /* font-family: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  /* темный сайт */
-  color: #fff;
-  background-color: #1b1a1b;
-  /* светлый сайт 
-  color: #000; 
-  background-color: #fff; */
+  /* * темный сайт */
+  color: var(--white, #fff);
+  background-color: var(--dark-background, #1b1a1b);
+  /* background-color: var(--dark-background); */
+  /* * светлый сайт */
+  /*
+    color: #000; 
+    background-color: #fff;
+    */
 }
 
 img {
@@ -81,6 +100,7 @@ blockquote {
 
 /* специальный класс для скрытого блока 
    скрыть но оставить в DOM-дереве */
+
 .visually-hidden {
   display: block;
   position: absolute;
@@ -92,6 +112,23 @@ blockquote {
   overflow: hidden;
 }
 
+
+/*
+У секции добавляю вертикальные паддинги,
+это половина от расстояния между блоками
+*/
+
+.page__header,
+.page__section,
+.section {
+  display: block;
+  /* width: 1440px; */
+  width: 100%;
+  padding: 25px 0;
+  /* border: 1px solid green; */
+}
+
+
 /*
 Пример контейнера
 Если контейнер 1080px по макету,
@@ -99,43 +136,59 @@ blockquote {
 в итоге 1240px
 Чтобы контент не прижимался к краям экрана
 */
+
 .container {
-  display: block;
-  width: 1240px;
-  max-width: 1240px; /* 30 + 1180 + 30 */
+  /* ? display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1160px;
+  max-width: 1160px;
+  /* 30 + 1100 + 30 */
   padding: 0 30px;
   margin: 0 auto;
   /* border: 1px solid orange; */
 }
 
-/*
-У секции добавляю вертикальные паддинги,
-это половина от расстояния между блоками
-*/
-.section {
-  padding: 25px 0;
-  display: block;
-  /* 1440px */
-  width: 100%;
-}
-
-
-
-
 .page__title {
-  font-family: Arial;
+  /* font-family: 'Poppins', sans-serif; */
+  /* color: #FFFFFF; */
+  font-family: var(--main-font);
+  color: var(--white);
   font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
+  font-weight: 800;
+  font-size: 61px;
+  line-height: 92px;
+  text-transform: capitalize;
+  /* //todo local */
+  text-align-last: left;
 }
+
+.page__subtitle {
+  font-family: var(--main-font);
+  color: var(--white, #fff);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 83px;
+  text-align: center;
+  text-transform: capitalize;
+  /* //todo local */
+  text-align-last: left;
+}
+
+
 
 
 /* * ВЫДЕЛЕНИЕ ТЕКСТА */
+/* 
 ::selection {
   color: #fff;
   background-color: #6C0287;
 }
+ */
+::selection {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
