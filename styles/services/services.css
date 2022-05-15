@@ -1,0 +1,150 @@
+/* *services */
+
+.services__card-item {}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+  flex-basis: 350px;
+  width: 350px;
+  height: 360px;
+  padding: 20px 20px 40px 20px;
+  background: #1E2028;
+  border-radius: 10px;
+}
+
+.card::before {
+  /* position: absolute; */
+  display: flex;
+  content: "";
+  width: 40px;
+  height: 40px;
+  /* background-color: #000; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card_branding::before {
+  background-image: url(ic_round-branding-watermark_card.svg);
+}
+
+.card_mobile::before {
+  background-image: url(icomoon-free_mobile_phone.svg);
+}
+
+.card_ecommerce::before {
+  background-image: url(clarity_shopping-cart-solid_cart.svg);
+}
+
+.card_human::before {
+  background-image: url(healthicons_human-resoruces_people.svg);
+}
+
+.card_learning::before {
+  background-image: url(fluent_learning-app-24-filled_ipod.svg);
+}
+
+.card_design::before {
+  background-image: url(ic_baseline-design-services_pencile.svg);
+}
+
+.card__link {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #A1C5E9;
+}
+.card__link:hover {
+  opacity: .9;
+}
+
+.card__link::after {
+  display: flex;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(right-arrow.svg);
+}
+
+.card__text {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  /* or 175% */
+  /* font-feature-settings: 'salt' on, 'liga' off; */
+  color: #FFFFFF;
+}
+
+.card__title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+.card_branding {}
+
+.card_design {}
+
+.card_ecommerce {}
+
+.card_human {}
+
+.card_learning {}
+
+.card_mobile {}
+
+.page__section {}
+
+.page__subtitle {}
+
+.services__subtitle {
+  width: 700px;
+}
+
+.services {
+  /* border: 1px solid green; */
+}
+
+.services__inner {
+  /* border: 1px solid lawngreen; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+.services__cards-list {
+  /* border: 1px solid magenta; */
+  display: flex;
+  flex-wrap: wrap;
+  /* todo */
+  gap: 22px;
+  width: 100%;
+}
+
+.services__heading {
+  /* border: 1px solid violet; */
+}
+
