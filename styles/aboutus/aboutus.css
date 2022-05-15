@@ -1,0 +1,101 @@
+/* *about us section */
+
+.aboutus {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.aboutus__heading {
+  /* border: 1px solid orange; */
+  align-self: stretch;
+}
+
+.aboutus__inner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  /* border: 1px solid violet; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.aboutus__item {
+  /* border: 1px solid lawngreen; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* width: 540px; */
+  flex-basis: 540px;
+  /* //todo */
+  flex-basis: 532px;
+  padding-left: 100px;
+}
+
+.aboutus__item::before {
+  display: block;
+  content: "";
+  width: 70px;
+  height: 70px;
+  /* background: #1E2028; */
+  /* background-image: url(flexible-10-plus.svg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.aboutus__item_since::before {
+  background: url(flexible-10-plus.svg) no-repeat center;
+}
+.aboutus__item_satisfying::before {
+  background: url(trainer-shield.svg) no-repeat center;
+}
+.aboutus__item_around::before {
+  background: url(track-earth.svg) no-repeat center;
+}
+.aboutus__item_payment::before {
+  background: url(money-banknotes.svg) no-repeat center;
+}
+
+
+.aboutus__item-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+  text-transform: capitalize;
+}
+
+.aboutus__navigation {
+  /* border: 1px solid orangered; */
+  align-self: stretch;
+}
+
+.aboutus__menu {
+  /* border: 1px solid orange; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.auboutus__item-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  /* or 188% */
+  text-transform: capitalize;
+}
+
+.auboutus__subtitle {
+  text-align: left;
+}
+
+.page__subtitle {}

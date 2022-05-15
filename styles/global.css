@@ -141,6 +141,7 @@ blockquote {
   /* ? display: block; */
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 1160px;
   max-width: 1160px;
   /* 30 + 1100 + 30 */
