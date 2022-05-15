@@ -37,11 +37,10 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   /* * темный сайт */
   color: var(--white, #fff);
   background-color: var(--dark-background, #1b1a1b);
-  /* background-color: var(--dark-background); */
   /* * светлый сайт */
   /*
     color: #000; 
@@ -125,6 +124,7 @@ blockquote {
   /* width: 1440px; */
   width: 100%;
   padding: 25px 0;
+
   /* border: 1px solid green; */
 }
 
@@ -141,27 +141,26 @@ blockquote {
   /* ? display: block; */
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 1160px;
   max-width: 1160px;
   /* 30 + 1100 + 30 */
   padding: 0 30px;
   margin: 0 auto;
+
   /* border: 1px solid orange; */
 }
 
 .page__title {
   /* font-family: 'Poppins', sans-serif; */
   /* color: #FFFFFF; */
-  font-family: var(--main-font);
+  /* font-family: var(--main-font);
   color: var(--white);
   font-style: normal;
   font-weight: 800;
   font-size: 61px;
   line-height: 92px;
-  text-transform: capitalize;
+  text-transform: capitalize; */
   /* //todo local */
-  text-align-last: left;
 }
 
 .page__subtitle {
@@ -174,7 +173,6 @@ blockquote {
   text-align: center;
   text-transform: capitalize;
   /* //todo local */
-  text-align-last: left;
 }
 
 

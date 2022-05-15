@@ -1,0 +1,65 @@
+/* *hero */
+
+
+/* *and jumbotron */
+
+.hero {
+  /* border: 1px solid lawngreen; */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero__container {
+  /* border: 1px solid orangered; */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hero__button {}
+
+.hero__inner,
+.hero__jumbotron {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 207px;
+  width: 100%;
+  min-height: 650px;
+  border-radius: 20px;
+}
+
+.hero__jumbotron_background {
+  background: url(jumbotron-bg-square.jpg) no-repeat center;
+}
+
+.hero__content {
+  width: 747px;
+  height: max-content;
+  min-height: 353px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  /* height: 353px; */
+  /* border: 1px solid lawngreen; */
+  width: 748px;
+}
+
+.hero__title {
+  font-family: var(--main-font);
+  color: var(--white);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 61px;
+  line-height: 92px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.hero__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: left;
+}
