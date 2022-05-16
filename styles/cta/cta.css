@@ -1,0 +1,99 @@
+/* ** */
+
+.cta {
+  /* border: 1px solid green; */
+}
+
+.cta__button {}
+
+
+.cta__outer {
+  border: 1px solid #1E2028;
+  background: #1E2028;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 50px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.cta__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 50px;
+  width: 100%;
+}
+
+.cta__heading {
+  /* border: 1px solid magenta; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.cta__subtitle {
+  /* border: 1px solid violet; */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 80px;
+  width: 650px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.cta__testi-list {
+  /* border: 1px solid magenta; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.cta__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 239px;
+  min-height: 66px;
+  border-left: 2px solid var(--white, #fff);
+  border-right: 2px solid var(--white, #fff);
+}
+
+.cta__number {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.cta__number_awards {}
+
+.cta__number_customers {}
+
+.cta__number_projects {}
+
+.cta__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.cta__text_awards {}
+
+.cta__text_customers {}
+
+.cta__text_projects {}
+
