@@ -1,12 +1,11 @@
 /* *four founders of our company */
-
-
 /*
   * make it by flex wrap, grid item and padding, and translateY()
 */
 
 .founders {
-  padding-bottom: 200px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .founders__heading {
@@ -22,7 +21,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 117px; /* 50 + 67 */
   gap: 50px;
 }
 

@@ -1,12 +1,10 @@
 /* *hero */
-
-
-/* *and jumbotron */
+/* *and jumbotron first screen banner */
 
 .hero {
   /* border: 1px solid lawngreen; */
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 25px;
 }
 
 .hero__container {

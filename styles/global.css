@@ -119,6 +119,7 @@ blockquote {
 
 .page__header,
 .page__section,
+.page__footer,
 .section {
   display: block;
   /* width: 1440px; */

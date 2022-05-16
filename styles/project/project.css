@@ -63,4 +63,6 @@ Amazing Project */
   justify-content: space-between;
   align-items: center;
   gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
