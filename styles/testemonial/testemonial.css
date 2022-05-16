@@ -1,0 +1,130 @@
+/* *testimonials Слайдер с отзывами о нашей компании */
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 570px;
+  height: 500px;
+  border: 1px solid #1E2028;
+  background-color: #1E2028;
+  border-radius: 10px;
+  padding: 44px;
+}
+
+.slider__list,
+.slider__wrapper {}
+
+.slider__author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.slider__author-image {
+  display: block;
+  width: 55px;
+  height: 55px;
+}
+
+.slider__author-name {
+  font-family: 'Inter', serif;
+  /* todo */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.slider__author-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 5px;
+}
+
+.slider__author-description {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.slider__dot {}
+
+.slider__dot_active {}
+
+.slider__dots {}
+
+.slide,
+.slider__item {
+  /* slid item */
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 17px;
+}
+
+.alide_active,
+.slider__item_active {
+  /* active slide */
+  opacity: 1;
+}
+
+.slider__testimonial-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 31px;
+}
+
+.testimonial {
+  /* border: 1px solid green; */
+}
+
+.testimonial__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 10px;
+}
+
+.testimonial__slider {}
+
+.testimonial__subtitle {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 83px;
+  text-align: left;
+  max-width: 366px;
+}
+
+.testimonial__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: left;
+  max-width: 490px;
+}
+
+
+.testimonial__inner {
+  /* border: 1px solid lawngreen; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
