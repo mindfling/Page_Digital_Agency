@@ -1,0 +1,119 @@
+  /* *four founders of our company */
+
+.founders {}
+
+.founders__heading {}
+
+.founders__inner {
+  /* border: 1px solid lawngreen; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+.founders__item {
+  /* border: 1px solid magenta; */
+  width: 540px;
+  height: 360px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 27px 52px;
+  gap: 12px;
+}
+
+.founders__list {
+  /* border: 1px solid orange; */
+  display: flex;
+  gap: 11px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.founder_one .founders__name,
+.founder_three .founders__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: right;
+  /* identical to box height */
+  grid-column: 1;
+  grid-row: 2;
+}
+.founder_two .founders__name,
+.founder_four .founders__name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: left;
+  /* identical to box height */
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
+
+  .founder_one .founders__description,
+  .founder_three .founders__description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    /* or 186% */
+    text-align: right;
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .founder_two .founders__description,
+  .founder_four .founders__description {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    /* or 186% */
+    text-align: left;
+    grid-column: 2;
+    grid-row: 3;
+  }
+  .founder_one .founders__photo,
+  .founder_three .founders__photo {
+    display: block;
+    width: 283px;
+    height: 358px;
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  .founder_two .founders__photo,
+  .founder_four .founders__photo {
+    display: block;
+    width: 283px;
+    height: 358px;
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+  .founder_one .founders__photo {
+    border-radius: 100px 0 0 0;
+  }
+  .founder_two .founders__photo {
+    border-radius: 0 100px 0 0;
+  }
+  .founder_three .founders__photo {
+    border-radius: 0 0 0 100px;
+  }
+  .founder_four .founders__photo {
+    border-radius: 0 0 100px 0;
+  }
+  .founders__subtitle {}
+  .page__section {}
+  .page__subtitle {}
+
+
+
+  .founder_two {
+    transform: translateY(50px);
+  }
+  .founder_four {
+    transform: translateY(50px);
+  }
