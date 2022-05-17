@@ -21,11 +21,11 @@
         <nav class="header__menu menu">
           <ul class="menu__list">
             <!-- todo #page links -->
-            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Project</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Testimonials</a></li>
+            <li class="menu__item"><a href="#page-hero" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="#page-aboutus" class="menu__link">About</a></li>
+            <li class="menu__item"><a href="#page-services" class="menu__link">Services</a></li>
+            <li class="menu__item"><a href="#page-project" class="menu__link">Project</a></li>
+            <li class="menu__item"><a href="#page-testemonial" class="menu__link">Testimonials</a></li>
           </ul>
         </nav>
         <button class="header__button button button_primary">
@@ -38,7 +38,7 @@
 
   <main class="page__main">
 
-    <section class="hero page__section">
+    <section class="hero page__section" id="page-hero">
       <div class="container hero__container">
         <div class="hero__inner hero__jumbotron hero__jumbotron_background">
           <!-- todo jumbotron background -->
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    <section class="aboutus page__section">
+    <section class="aboutus page__section" id="page-aboutus">
       <div class="container">
         <div class="aboutus__inner">
           <div class="aboutus__heading">
@@ -82,7 +82,7 @@
       </div>
     </section>
 
-    <section class="services page__section">
+    <section class="services page__section" id="page-services">
       <div class="container">
         
         <div class="services__inner">
@@ -164,7 +164,7 @@
 
 
     <!-- todo by images simple -->
-    <section class="project page__section">
+    <section class="project page__section" id="page-project">
       <div class="container">
         <div class="project__inner">
           <div class="project__heading">
@@ -235,7 +235,7 @@
       </div>
     </section>
 
-    <section class="testimonial page__section">
+    <section class="testimonial page__section" id="page-testemonial">
       <div class="container">
         
         <div class="testimonial__inner">
@@ -246,38 +246,40 @@
 
           <div class="testimonial__slider slider">
             <ul class="slider__wrapper slider__list">
-              <!-- <li class="slider__item slider__item_active">
-                  <div class="slider__author">
-                    <img class="slider__author-image" src="styles/testemonial/mr_jackson.png" alt="Mr Jackson">
-                    <div class="slider__author-text">
-                      <h6 class="slider__name">Mr. Jackson</h6>
-                      <p class="slider__description">CEO of ABC Group</p>
-                    </div>
-                  </div>
-                  <div class="slider__testimonial-text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo soluta sit dolorum pariatur voluptates
-                    impedit sed ut enim in harum reprehenderit nobis, cumque consequatur rerum eos inventore omnis autem
-                    unde.
-                  </div>
-                </li> -->
-              <!-- <li class="slider__item">
-                  <div class="slider__author">
-                    <img class="slider__author-image" src="styles/testemonial/mr_jackson.png" alt="Mr Jackson">
-                    <div class="slider__author-text">
-                      <h6 class="slider__name">Mr. Jackson</h6>
-                      <p class="slider__description">CEO of ABC Group</p>
-                    </div>
-                  </div>
-                  <div class="slider__testimonial-text">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo soluta sit dolorum pariatur voluptates
-                    impedit sed ut enim in harum reprehenderit nobis, cumque consequatur rerum eos inventore omnis autem
-                    unde.
-                  </div>
-                </li> -->
-              
-              <li class="slider__item slide alide_active">
+
+              <li class="slider__item visually-hidden">
                 <div class="slider__author">
                   <img class="slider__author-image" src="styles/testemonial/mr_jackson.png" alt="Mr Jackson">
+                  <div class="slider__author-text">
+                    <h6 class="slider__name">Mr. Jackson</h6>
+                    <p class="slider__description">CEO of ABC Group</p>
+                  </div>
+                </div>
+                <div class="slider__testimonial-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo soluta sit dolorum pariatur voluptates
+                  impedit sed ut enim in harum reprehenderit nobis, cumque consequatur rerum eos inventore omnis autem
+                  unde.
+                </div>
+              </li>
+
+              <li class="slider__item visually-hidden">
+                <div class="slider__author">
+                  <img class="slider__author-image" src="styles/testemonial/mr_jackson.png" alt="Mr Jackson">
+                  <div class="slider__author-text">
+                    <h6 class="slider__name">Mr. Jackson</h6>
+                    <p class="slider__description">CEO of ABC Group</p>
+                  </div>
+                </div>
+                <div class="slider__testimonial-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo soluta sit dolorum pariatur voluptates
+                  impedit sed ut enim in harum reprehenderit nobis, cumque consequatur rerum eos inventore omnis autem
+                  unde.
+                </div>
+              </li>
+              
+              <li class="slider__item slider__item_active slide alide_active">
+                <div class="slider__author">
+                  <img class="slider__author-image" src="styles/testemonial/mr-jackson-square.jpg" alt="Mr Jackson" width="55" height="55">
                   <div class="slider__author-text">
                     <h6 class="slider__author-name">Mr. Jackson</h6>
                     <p class="slider__author-description">CEO of ABC Group</p>
@@ -292,13 +294,14 @@
               </li>
 
             </ul>
-            <!-- todo -->
-            <button class="slider__arrow slider__arrow_left"></button>
-            <button class="slider__arrow slider__arrow_right"></button>
-            <div class="slider__dots">
-              <div class="slider__dot slider__dot_active"></div>
-              <div class="slider__dot"></div>
-              <div class="slider__dot"></div>
+            
+            <button class="slider__arrow slider__arrow_left">&lsaquo;</button>
+            <button class="slider__arrow slider__arrow_right">&rsaquo;</button>
+            
+            <div class="slider__dots dots-list">
+              <button class="slider__dot slider__dot_active"></button>
+              <button class="slider__dot"></button>
+              <button class="slider__dot"></button>
             </div>
           </div>
         </div>
