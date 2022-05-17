@@ -33,6 +33,11 @@
   height: 80px;
   background: url(quote-mark.svg) no-repeat center;
   /* border: 1px solid orange; */
+  transform: scale(100%);
+  transition: transform 300ms ease;
+}
+.slider:hover::before {
+  transform: scale(105%);
 }
 
 .slider__list,
@@ -182,12 +187,14 @@
   justify-content: center;
   align-items: flex-start;
   row-gap: 17px;
+  opacity: 0;
+  transition: all 400ms ease;
 }
 
-.alide_active,
 .slider__item_active {
   /* active slide */
   opacity: 1;
+  transition: all 400ms ease;
 }
 
 .slider__testimonial-text {
