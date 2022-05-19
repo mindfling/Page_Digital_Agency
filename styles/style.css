@@ -15,5 +15,22 @@
 @import "project/project.css";
 @import "founder/founder.css";
 @import "testemonial/testemonial.css";
+@import url('testemonial/slider.css');
 @import "cta/cta.css";
 @import "footer/footer.css";
+
+
+/* *DEBUG*
+.header,
+.hero,
+.aboutus,
+.services,
+.project,
+.founders,
+
+.cta
+{
+  display: none;
+}
+ */
+ 

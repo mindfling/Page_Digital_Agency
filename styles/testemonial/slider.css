@@ -1,0 +1,212 @@
+/* *slider* */
+
+.slider {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 570px;
+  height: 500px;
+  border: 1px solid #1E2028;
+  background-color: #1E2028;
+  border-radius: 10px;
+  padding: 100px 44px 50px;
+  /* border: 1px solid lawngreen; */
+}
+
+.slider::before {
+  /* *quoter mark кавычки цитаты " */
+  display: block;
+  position: absolute;
+  top: 37px;
+  right: 44px;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: url(quote-mark.svg) no-repeat center;
+  /* *"* */
+  transform: scale(100%);
+  transition: transform 300ms ease;
+  /* border: 1px solid orange; */
+}
+
+.slider:hover::before {
+  /* zoomed by hover */
+  transform: scale(105%);
+}
+
+.slider__wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* border: 1px solid cyan; */
+}
+
+.slide,
+.slider__item {
+  /* slide item */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 17px;
+  transition: all 700ms ease;
+  opacity: 0;
+  z-index: 0;
+  /* border: 1px solid orange; */
+}
+
+.slider__item_active {
+  /* active slide */
+  transition: all 400ms ease;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  /* border: 1px solid red; */
+}
+
+.slider__author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.slider__author-image {
+  display: block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  /* border: 1px solid #A69D94; */
+  border: 1px solid #655F62;
+}
+
+.slider__author-name {
+  /* имя автора отзыва */
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.slider__author-description {
+  /* описание под именем автора */
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.slider__author-text {
+  /* текст отзыва */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 5px;
+}
+
+.slider__arrow {
+  display: block;
+  position: absolute;
+  width: 31px;
+  height: 208px;
+  font-family: Inter, sans-serif;
+  font-size: 69px;
+  font-style: normal;
+  font-weight: normal;
+  border: 1px solid rgba(138, 134, 130, 0.741);
+  border: none;
+  color: #A69D94;
+  background: rgba(18, 20, 28, 0.3);
+  top: 181px;
+  opacity: .1;
+  opacity: 0;
+  border-radius: 6px;
+  transition: transform, opacity 200ms ease;
+  transform: scale(100%);
+  transition-property: transform, opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.slider:hover .slider__arrow {
+  opacity: .5;
+}
+
+.slider__arrow:hover {
+  opacity: .7 !important;
+  transform: scale(105%);
+}
+
+.slider__arrow:active {
+  opacity: .9 !important;
+  background: rgba(18, 20, 28, 0.9);
+  color: rgba(255, 255, 255, 0.789);
+  transform: scale(100%);
+}
+
+.slider__arrow_left {
+  /* стрелка влево < */
+  content: "\2039";
+  left: 7px;
+}
+
+.slider__arrow_right {
+  /* стрелка вправо > */
+  content: "\203a";
+  right: 7px;
+}
+
+.slider__dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #8E8F93;
+  border: 1px solid #8E8F93;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.slider__dot:hover {
+  opacity: .9;
+}
+
+.slider__dot:hover {
+  opacity: .7;
+}
+
+.slider__dot_active {
+  background: #fff;
+  border: 1px solid #fff;
+  opacity: 1 !important;
+}
+
+.slider__dot_active:hover {
+  opacity: 1;
+}
+
+.slider__dots {
+  /* .dots-list */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  opacity: .9;
+  transform: scale(100%);
+  transition: transform 300ms ease;
+}
+
+.slider:hover .slider__dots {
+  opacity: 1;
+  transform: scale(135%);
+}

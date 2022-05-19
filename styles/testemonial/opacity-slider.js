@@ -1,47 +1,113 @@
 'use strict';
 
 /*
-  * slider with opacity
+  * slider with opacity by css
   * for testimonial
   */
+ 
+const slider = document.querySelector('.slider');
+
+const slides = slider.querySelectorAll('.slider__item');
+let dotsList; // = slider.querySelector('.slider__dots');
+let dots; // = slider.querySelectorAll('.slider__dot');
+
+const prevSlideButton = slider.querySelector('.slider__arrow_left');
+const nextSlideButton = slider.querySelector('.slider__arrow_right');
 
 let currentSlideIndex = 0;
+let slidesAmount = slides.length;
 
-const slider = document.querySelector('.slider');
-const slides = slider.querySelectorAll('.slider__item');
-const dots = document.querySelectorAll('.slider__dot');
-console.log('dots : ', dots );
-console.log('slider: ', slider);
-console.log('slides: ', slides);
 
-const prevSlideButton = document.querySelector('.slider__arrow_left');
-const nextSlideButton = document.querySelector('.slider__arrow_right');
-console.log('prevSlideButton: ', prevSlideButton);
-console.log('nextSlideButton: ', nextSlideButton);
+const init  = () => {
+  //count number of slides
+  //считаем количество слайдов
+  slidesAmount = slides.length;
+
+  // <!-- <div class="slider__dots"> -->
+  dotsList = document.createElement('div');
+  dotsList.classList.add('slider__dots');
+  slider.append(dotsList);
+
+  //создаем нужное количество точек динамически
+  // <!-- <button class="slider__dot"></button> -->
+  for (let i = 0; i < slidesAmount; i++) {
+    const newDot = document.createElement('button');
+    newDot.classList.add('slider__dot');
+    dotsList.append(newDot);
+  }
+
+  dots = slider.querySelectorAll('.slider__dot');
+
+  //set slide index to 0 by default
+  //по умолчанию видим только 1й слайд
+  currentSlideIndex = 0;
+
+  
+  //скрываем все слайды все делаем неактивными
+  // slides.forEach( (slide) => {
+  //   slide.classList.remove('slide__item_active');
+  // });
+
+  //все точки делаем неактивными
+  // dots.forEach( (dot) => {
+  //   dot.classList.remove('slider__dot_active');
+  // })
+
+  changeSlide();
+
+  return ;
+}
+
+const nextSlide = () => {
+  // вызывается при клике на nextButton
+  // * 0, 1, 2
+  // * 3-1
+  if (currentSlideIndex < slidesAmount - 1) {
+    currentSlideIndex++;
+  } else {
+    currentSlideIndex = 0;
+  }
+
+  changeSlide();
+}
+
+const prevSlide = () => {
+  // вызывается при клике на prevButton
+  // * 0, 1, 2
+  // * 0
+  if (currentSlideIndex > 0) {
+    currentSlideIndex--;
+  } else {
+    currentSlideIndex = slidesAmount - 1; // * 2
+  }
+
+  changeSlide();
+  return currentSlideIndex;
+}
+
 
 
 // todo show slider func
-const changeSlide = (slideIndex) => {
+const changeSlide = () => {
 
   slides.forEach( (slide, index) => {
-      
-      slide.classList.remove('slide__item_active');
-      slide.classList.add('visually-hidden');
-      console.log('slide: ', slide);
-      
-      if ( index === slideIndex ) {
-        slides[index].classList.remove('visually-hidden');
-        slides[index].classList.add('slider__item_active');
-        console.log('slides[index]: ', slides[index]);
-      }
+    if ( index === currentSlideIndex ) {
+      //устанавливаем класс active у нужного слайдера
+      slides[index].classList.add('slider__item_active');
+      //и у нужной точки
+      dots[index].classList.add('slider__dot_active');
+    } else {
+      slide.classList.remove('slider__item_active');
+      dots[index].classList.remove('slider__dot_active');
+    }
   });
-
-  console.log(slideIndex);
+  console.log('current slide ', currentSlideIndex);
 }
 
 
 //todo make click dot active
 //todo change current index
+/*
 const getItActiveIndexDot = (target) => {
   //make current dot active
 
@@ -63,20 +129,43 @@ const getItActiveIndexDot = (target) => {
         // console.log('index: ', index);
       }
     })
+    
 
     //then if target dot isnot active - make it active
     target.classList.add('slider__dot_active');
     return currentSlideIndex;
   }
 }
+*/
+
+//инициируем в начале
+init();
+
 
 //вешаем слушатели на точки
 dots.forEach((dot) => {
   dot.addEventListener('click', (event) => {
     const target = event.target;
-    console.log('active index will be', getItActiveIndexDot(target));
-    changeSlide(currentSlideIndex);
+    
+    //проверяем по какой точке клик
+    dots.forEach( (dot, index) => {
+      if ( dot === target) {
+        //устанавливаем нужный индекс
+        currentSlideIndex = index;
+      }
+    });
+    changeSlide();
   })
 })
 
+//вешаем клики по кнопкам
+prevSlideButton.addEventListener('click', event => {
+  event.preventDefault();
+  prevSlide();
+});
+
+nextSlideButton.addEventListener('click', event => {
+  event.preventDefault();
+  nextSlide();
+});
 
