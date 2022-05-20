@@ -1,10 +1,10 @@
 'use strict';
 
 /*
-  * slider with opacity by css
-  * for testimonial
-  */
- 
+ * slider with opacity by css
+ * for testimonial
+ */
+
 const slider = document.querySelector('.slider');
 
 const slides = slider.querySelectorAll('.slider__item');
@@ -18,7 +18,10 @@ let currentSlideIndex = 0;
 let slidesAmount = slides.length;
 
 
-const init  = () => {
+const init = () => {
+  console.log('click on slider buttons or dots then can use arrow Left or Right');
+  // ! начальная инициализация слайдера
+
   //count number of slides
   //считаем количество слайдов
   slidesAmount = slides.length;
@@ -42,20 +45,45 @@ const init  = () => {
   //по умолчанию видим только 1й слайд
   currentSlideIndex = 0;
 
-  
-  //скрываем все слайды все делаем неактивными
-  // slides.forEach( (slide) => {
-  //   slide.classList.remove('slide__item_active');
-  // });
 
-  //все точки делаем неактивными
-  // dots.forEach( (dot) => {
-  //   dot.classList.remove('slider__dot_active');
-  // })
+  //вешаем слушатели на точки
+  dots.forEach((dot) => {
+    dot.addEventListener('click', (event) => {
+      const target = event.target;
 
+      //проверяем по какой точке клик
+      dots.forEach((dot, index) => {
+        if (dot === target) {
+          //устанавливаем нужный индекс
+          currentSlideIndex = index;
+        }
+      });
+      changeSlide();
+    })
+  })
+
+  //вешаем клики по кнопкам
+  prevSlideButton.addEventListener('click', event => {
+    event.preventDefault();
+    prevSlide();
+  });
+
+  nextSlideButton.addEventListener('click', event => {
+    event.preventDefault();
+    nextSlide();
+  });
+
+  //нажатие на клавиши стрелок
+  slider.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') {
+      prevSlide();
+    } else if (event.key === 'ArrowRight') {
+      nextSlide();
+    }
+  });
+
+  //1й раз для отображения начального слайда
   changeSlide();
-
-  return ;
 }
 
 const nextSlide = () => {
@@ -67,8 +95,8 @@ const nextSlide = () => {
   } else {
     currentSlideIndex = 0;
   }
-
   changeSlide();
+  return currentSlideIndex;
 }
 
 const prevSlide = () => {
@@ -80,18 +108,16 @@ const prevSlide = () => {
   } else {
     currentSlideIndex = slidesAmount - 1; // * 2
   }
-
   changeSlide();
   return currentSlideIndex;
 }
 
 
-
 // todo show slider func
 const changeSlide = () => {
 
-  slides.forEach( (slide, index) => {
-    if ( index === currentSlideIndex ) {
+  slides.forEach((slide, index) => {
+    if (index === currentSlideIndex) {
       //устанавливаем класс active у нужного слайдера
       slides[index].classList.add('slider__item_active');
       //и у нужной точки
@@ -101,71 +127,8 @@ const changeSlide = () => {
       dots[index].classList.remove('slider__dot_active');
     }
   });
-  console.log('current slide ', currentSlideIndex);
 }
 
 
-//todo make click dot active
-//todo change current index
-/*
-const getItActiveIndexDot = (target) => {
-  //make current dot active
-
-  if (target.classList.contains('slider__dot_active')) {
-    //this is already active dot
-    console.log('this is active dot ');
-    return false;
-
-  } else {
-    //if this unactive dot
-
-    //at first make all dots unactive
-    dots.forEach( (elem, index) => {
-      if ( elem === target ) {{
-        currentSlideIndex = index;
-        // console.log('make new Slide Index at: ', currentSlideIndex);
-      }} else {
-        elem.classList.remove('slider__dot_active');
-        // console.log('index: ', index);
-      }
-    })
-    
-
-    //then if target dot isnot active - make it active
-    target.classList.add('slider__dot_active');
-    return currentSlideIndex;
-  }
-}
-*/
-
-//инициируем в начале
+// * инициируем в начале
 init();
-
-
-//вешаем слушатели на точки
-dots.forEach((dot) => {
-  dot.addEventListener('click', (event) => {
-    const target = event.target;
-    
-    //проверяем по какой точке клик
-    dots.forEach( (dot, index) => {
-      if ( dot === target) {
-        //устанавливаем нужный индекс
-        currentSlideIndex = index;
-      }
-    });
-    changeSlide();
-  })
-})
-
-//вешаем клики по кнопкам
-prevSlideButton.addEventListener('click', event => {
-  event.preventDefault();
-  prevSlide();
-});
-
-nextSlideButton.addEventListener('click', event => {
-  event.preventDefault();
-  nextSlide();
-});
-

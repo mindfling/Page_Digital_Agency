@@ -126,7 +126,7 @@
   border: 1px solid rgba(138, 134, 130, 0.741);
   border: none;
   color: #A69D94;
-  background: rgba(18, 20, 28, 0.3);
+  background: rgba(18, 20, 28, 0.05);
   top: 181px;
   opacity: .1;
   opacity: 0;
@@ -139,18 +139,20 @@
 }
 
 .slider:hover .slider__arrow {
-  opacity: .5;
+  background: rgba(18, 20, 28, 0.1);
+  opacity: .6;
 }
 
 .slider__arrow:hover {
+  background: rgba(18, 20, 28, 0.5) !important;
   opacity: .7 !important;
   transform: scale(105%);
 }
 
 .slider__arrow:active {
   opacity: .9 !important;
-  background: rgba(18, 20, 28, 0.9);
-  color: rgba(255, 255, 255, 0.789);
+  background: rgba(18, 20, 28, 0.95);
+  color: rgba(255, 255, 255, 0.8);
   transform: scale(100%);
 }
 
