@@ -51,6 +51,7 @@
 }
 
 .footer__input:focus {
+  outline-offset: 3px;
   outline: 1px solid #cd06ff;
 }
 
@@ -71,6 +72,12 @@
   font-size: inherit;
   line-height: inherit;
   opacity: 1;
+  border-radius: 3px;
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+  transition-property: outline-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
 }
 
 .footer__link:hover {
