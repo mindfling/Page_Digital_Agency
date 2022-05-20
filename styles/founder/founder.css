@@ -147,12 +147,15 @@
 }
 
 .founders__photo:hover {
-  filter: grayscale(0) saturate(1.6);
-  transform: scale(102%);
+  filter: grayscale(0) saturate(1.9);
+  /* transform: scale(102%); */
   /* box-shadow: 0px 0px 17px 3px #5353539c; */
 }
 .founder_two .founders__photo:hover {
-  filter: grayscale(0.2) saturate(1.2);
+  filter: grayscale(0.2) saturate(1.4);
+}
+.founder_four .founders__photo:hover {
+  filter: grayscale(0) saturate(1.5);
 }
 
 .founder_one .founders__photo,
