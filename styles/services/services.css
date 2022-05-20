@@ -15,6 +15,10 @@
   padding: 20px 20px 40px 20px;
   background: #1E2028;
   border-radius: 10px;
+  transition: transform 400ms ease;
+}
+.card:hover {
+  transform: scale(104%);
 }
 
 .card::before {
@@ -26,7 +30,12 @@
   /* background-color: #000; */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 100%;
+  transition: all 300ms ease-out;
+}
+
+.card:hover::before {
+  transform: rotate(360deg);
 }
 
 .card_branding::before {
@@ -54,7 +63,7 @@
 }
 
 .card__link {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   column-gap: 20px;
   font-family: 'Poppins';
@@ -63,26 +72,16 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: capitalize;
-  /* identical to box height, or 143% */
-  font-feature-settings: 'salt' on, 'liga' off;
-  color: #A1C5E9;
+  color: #A1C5E9; */
+  transition: transform 200ms ease-out;
 }
 
-.card__link:hover {
-  opacity: .9;
-}
-
-.card__link::after {
-  display: flex;
-  content: "";
-  width: 20px;
-  height: 20px;
-  background: url(right-arrow.svg) no-repeat center;
-  background-size: contain;
+.card:hover .card__link {
+  transform: scale(105%) translateX(2%);
 }
 
 .card__text {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -93,7 +92,7 @@
 }
 
 .card__title {
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;

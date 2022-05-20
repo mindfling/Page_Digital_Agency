@@ -1,4 +1,6 @@
 /* *four founders of our company */
+
+
 /*
   * make it by flex wrap, grid item and padding, and translateY()
 */
@@ -21,7 +23,8 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
-  padding-bottom: 117px; /* 50 + 67 */
+  padding-bottom: 117px;
+  /* 50 + 67 */
   gap: 50px;
 }
 
@@ -56,12 +59,13 @@
   display: grid;
   grid-template-rows: 1fr 27px 52px;
   gap: 10px 15px;
-  transition: all 400ms ease;
+  transition: all 500ms ease;
   transform: scale(100%);
+  z-index: 0;
 }
 
 .founders__item:hover {
-  /* transform: scale(110%); */
+  transform: scale(105%);
   z-index: 5;
 }
 
@@ -73,6 +77,13 @@
 .founder_one,
 .founder_three {
   grid-template-columns: 1fr 282px;
+}
+
+
+/* ? */
+.founder_two:hover,
+.founder_four:hover {
+  transform: scale(105%) translateY(67px);
 }
 
 
@@ -131,11 +142,17 @@
   filter: grayscale(0.2);
   transition: all 200ms ease;
 }
+.founder_two .founders__photo {
+  filter: grayscale(0.4);
+}
 
 .founders__photo:hover {
-  filter: grayscale(0) saturate(1.2);
-  transform: scale(110%);
-  box-shadow: 0px 0px 22px 6px #5353539c;
+  filter: grayscale(0) saturate(1.6);
+  transform: scale(102%);
+  /* box-shadow: 0px 0px 17px 3px #5353539c; */
+}
+.founder_two .founders__photo:hover {
+  filter: grayscale(0.2) saturate(1.2);
 }
 
 .founder_one .founders__photo,

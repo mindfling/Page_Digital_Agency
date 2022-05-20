@@ -48,19 +48,30 @@
   border-radius: 50%;
   top: 0;
   left: 0;
+  transition: all 300ms ease-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
 .aboutus__item_since::before {
-  background: url(flexible-10-plus.svg) no-repeat center;
+  background-image: url(flexible-10-plus.svg);
 }
 .aboutus__item_satisfying::before {
-  background: url(trainer-shield.svg) no-repeat center;
+  background-image: url(trainer-shield.svg);
 }
 .aboutus__item_around::before {
   background: url(track-earth.svg) no-repeat center;
+  background-size: 100%;
 }
 .aboutus__item_payment::before {
   background: url(money-banknotes.svg) no-repeat center;
+  background-size: 100%;
+}
+
+.aboutus__item:hover::before {
+  /* background: url(flexible-10-plus.svg) no-repeat center; */
+  background-size: 130%;
 }
 
 

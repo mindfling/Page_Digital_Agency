@@ -1,29 +1,42 @@
 /* *next link stylize */
 
 .next {
-  display: flex;
-  flex-direction: row;
-  column-gap: 20px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: capitalize;
-  color: #A1C5E9;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* position: relative; */
 }
 
 .next_link {
   display: flex;
-  position: relative;
+  flex-direction: row;
+  column-gap: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #A1C5E9;
+  opacity: .8;
+  transition: all 100ms ease;
 }
 
 .next_link::after {
-  content: "";
+  /* * just arrow after link */
   display: flex;
   content: "";
   width: 20px;
   height: 20px;
   background: url(right-arrow.svg) no-repeat center;
   background-size: contain;
+  transition: all 100ms ease;
 }
+
+
+.next_link:hover {
+  opacity: 1;
+}
+
+/* .next_link:hover::after {
+  transform: scaleX(130%) translateX(15%);
+} */
