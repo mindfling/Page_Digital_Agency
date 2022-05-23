@@ -18,18 +18,21 @@ Amazing Project */
   align-items: center;
 }
 
-
 .project__view-all-link {
   /* display: flex; */
   align-self: flex-end;
   transition: transform 200ms ease-out;
   transform: translateY(-5%);
 }
+
 .project__heading:hover .project__view-all-link {
   transform: scaleX(108%) translateX(-3%);
 }
 
 .project__image {
+  display: block;
+  width: 540px;
+  height: 307px;
   border-radius: 12px;
   transition: transform 300ms ease;
   transition-property: transform, box-shadow;
@@ -43,28 +46,54 @@ Amazing Project */
 .project__item {}
 
 .project__link-image {
-  /* background: #1E2028; */
-  /* border-radius: 10px; */
+  display: block;
+  width: 540px;
+  height: 307px;
+  background-color: #1E2028;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 12px;
+  transition: all 400ms ease;
 }
 
-.project__link-image_gospace {}
+.project__link-image:hover {
+  background-size: 110%;
+}
 
-.project__link-image_stay {}
+.project__link-image_gospace {
+  background-image: url(thumb-gospace.jpg);
+}
 
-.project__link-image_staycation {}
+.project__link-image_stayhealthy {
+  background-image: url(thumb-stayhealthy.jpg);
+}
 
-.project__link-image_vaksin {}
+.project__link-image_staycation {
+  background-image: url(thumb-staycation.jpg);
+}
+
+.project__link-image_vaksin {
+  background-image: url(thumb-vaksin_aman_halal.jpg);
+}
 
 .project__list {
   /* border: 1px solid violet; */
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   /* todo */
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.project__list_variant_first {
+  flex-direction: row;
+}
+
+.project__list_variant_second {
+  flex-direction: row-reverse;
 }
 
 
